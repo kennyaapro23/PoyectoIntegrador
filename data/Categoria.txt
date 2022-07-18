@@ -1,0 +1,12 @@
+C1	Laptops
+C2	Monitores
+C3	Mauses
+C4	Teclados
+C5	Placas Madre
+C6	Audifonos
+C7	Procesadores
+C8	Almacenamiento
+C9	Memorias ram
+C10	Cases
+C11	Funte de poder
+C12	Tarjeta de video

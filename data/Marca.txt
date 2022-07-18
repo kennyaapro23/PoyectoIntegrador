@@ -1,0 +1,15 @@
+C1	Intel
+C2	AMD
+C3	Asus
+C4	Gigabyte
+C5	Logitech
+C6	BenQ
+C7	Corsair
+C8	Hp
+C9	Lenovo
+C10	Halion
+C11	Red Dragon
+C12	Samsung
+C13	LG
+C14	Antryx
+C15	Msi
