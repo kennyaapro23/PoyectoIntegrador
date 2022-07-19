@@ -48,8 +48,8 @@ public class MenuOpciones {
         menu += "3 = Crear Categoria\n";
         menu += "4 = Crear Marca\n";
         menu += "5 = Crear Cliente\n6 = Crear Producto\n7 = Lista de Productos\n";
-        menu += "8 = Registro Ventas\n9 = Reporte de Ventas\n";
-        menu += "10 = generar pdf reporte\n11 = reporte tabla de venta";
+        menu += "8 = Registro Ventas\n9 = Reporte de Ventas";
+       
         System.out.println(menu);
         do {
             switch (opciones) {
@@ -63,7 +63,6 @@ public class MenuOpciones {
                 case 8: new VentaDao().registroVentaGeneral();break;
                 case 9: new VentaDao().reporteVentasRangoFecha();break;
                 case 10: new VentaDao().generarPDFReporte(); break ;
-                case 11: new ProductoDao().generarPDFReporte(); break ;
                 default: System.out.println("Opcion Invalida!"); break;
             }
             String continuar=leerT.leer("",
