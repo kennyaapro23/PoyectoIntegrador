@@ -3,7 +3,7 @@ package pe.edu.upeu.app;
 import java.io.Console;
 
 import org.fusesource.jansi.Ansi;
-import org.fusesource.jansi.Ansi.Color;
+
 
 import pe.edu.upeu.dao.CategoriaDao;
 import pe.edu.upeu.dao.ClienteDao;
@@ -39,23 +39,24 @@ public class MenuOpciones {
     }
     
     public void menuPrincipal() {
-<<<<<<< HEAD
+
         System.out.println("------------------------------------Sistema de Ventas------------------------------");
         int opciones = 0;
-=======
+
         Ansi colorR=new Ansi();
         System.out.println(colorR.bgBrightYellow().fgBlack().a("          Sistema de Ventas          ").reset());
-        int opciones = 7;
->>>>>>> 242f9d2063196d0c34f9097f4e40ae113ad094c1
+        
         String menu = "";
         menu += "1 = Registro de Usuario\n";
         menu += "2 = Lista de Usuarios\n";
         menu += "3 = Crear Categoria\n";
         menu += "4 = Crear Marca\n";
         menu += "5 = Crear Cliente\n6 = Crear Producto\n7 = Lista de Productos\n";
-        menu += "8 = Registro Ventas\n9 = Reporte de Ventas";
+        menu += "8 = Registro Ventas\n9 = Reporte de Ventas\n";
+        menu += "10 = Reporte en pdf\n";
        
         System.out.println(menu);
+        
         do {
             switch (opciones) {
                 case 1: new UsuarioDao().crearUsuarios();   break;
@@ -67,13 +68,9 @@ public class MenuOpciones {
                 case 7: new ProductoDao().reportarProductos(); break;
                 case 8: new VentaDao().registroVentaGeneral();break;
                 case 9: new VentaDao().reporteVentasRangoFecha();break;
-<<<<<<< HEAD
-                
-                default: System.out.println("Opcion Invalida!");
-=======
                 case 10: new VentaDao().generarPDFReporte(); break ;
+                
                 default: System.out.println("Opcion Invalida!"); break;
->>>>>>> 242f9d2063196d0c34f9097f4e40ae113ad094c1
             }
             String continuar=leerT.leer("",
              "Desea Continuar? S=Si/N=No").charAt(0)=='S'?"S":"N";
