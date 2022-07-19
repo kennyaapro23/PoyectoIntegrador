@@ -1,5 +1,8 @@
 package pe.edu.upeu.dao;
 
+import org.fusesource.jansi.Ansi;
+import org.fusesource.jansi.AnsiConsole;
+
 import pe.edu.upeu.crud.AppCrud;
 import pe.edu.upeu.modelo.ProductoTO;
 import pe.edu.upeu.util.LeerArchivo;
@@ -53,6 +56,11 @@ public class ProductoDao extends AppCrud{
     }
 
     public void reportarProductos() {
+<<<<<<< HEAD
+=======
+        
+        
+>>>>>>> 242f9d2063196d0c34f9097f4e40ae113ad094c1
         leerA=new LeerArchivo(TABLA_PRODUCTO); 
         Object[][] data=listarContenido(leerA);
         System.out.printf("%20s %10s %10s %5s %n","Nombre","Categoria",
@@ -62,6 +70,12 @@ public class ProductoDao extends AppCrud{
             data[i][3], Double.parseDouble(String.valueOf(data[i][4]))+
             Double.parseDouble(String.valueOf(data[i][5])));
         }
-
+        
     }
+    
+
+<<<<<<< HEAD
+    }
+=======
+>>>>>>> 242f9d2063196d0c34f9097f4e40ae113ad094c1
 }
