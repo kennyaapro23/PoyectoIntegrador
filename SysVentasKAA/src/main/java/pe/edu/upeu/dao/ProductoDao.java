@@ -52,7 +52,7 @@ public class ProductoDao extends AppCrud{
         System.out.println("");        
     }
 
-    /*public void reportarProductos() {
+    public void reportarProductos() {
         leerA=new LeerArchivo(TABLA_PRODUCTO); 
         Object[][] data=listarContenido(leerA);
         System.out.printf("%20s %10s %10s %5s %n","Nombre","Categoria",
@@ -63,5 +63,5 @@ public class ProductoDao extends AppCrud{
             Double.parseDouble(String.valueOf(data[i][5])));
         }
 
-    }*/
+    }
 }

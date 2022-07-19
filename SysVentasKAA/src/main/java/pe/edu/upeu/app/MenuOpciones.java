@@ -33,7 +33,7 @@ public class MenuOpciones {
     
     public void menuPrincipal() {
         System.out.println("------------------------------------Sistema de Ventas------------------------------");
-        int opciones = 7;
+        int opciones = 0;
         String menu = "";
         menu += "1=Registro de Usuario\n";
         menu += "2=Lista de Usuarios\n";
@@ -50,11 +50,11 @@ public class MenuOpciones {
                 case 4: new MarcaDao().crearMarca(); break;
                 case 5: new ClienteDao().crearCliente(); break;
                 case 6: new ProductoDao().crearProducto(); break;
-                //case 7: new ProductoDao().reportarProductos(); break;
+                case 7: new ProductoDao().reportarProductos(); break;
                 case 8: new VentaDao().registroVentaGeneral();break;
                 case 9: new VentaDao().reporteVentasRangoFecha();break;
                 
-                default: System.out.println("Opcion Invalida!"); break;
+                default: System.out.println("Opcion Invalida!");
             }
             String continuar=leerT.leer("",
              "Desea Continuar? S=Si/N=No").charAt(0)=='S'?"S":"N";
