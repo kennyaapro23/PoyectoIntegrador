@@ -16,7 +16,7 @@ public class MarcaDao extends AppCrud{
     public void crearMarca() {
       mTo=new MarcaTO();
       leerA=new LeerArchivo(TABLA_MARCA);
-      String idM=generarId(leerA, 0, "C", 1);
+      String idM=generarId(leerA, 0, "M", 1);
       mTo.setIdMarca(idM);
       mTo.setNombre(leerT.leer("", "Ingrese nombre Marca"));
       leerA=new LeerArchivo(TABLA_MARCA);

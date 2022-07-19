@@ -1,0 +1,11 @@
+P1	LapTop Lenovo 15.6	C1	M9	1999.0	200.0	18
+P2	Teclado Ginius	C4	M3	44.0	5.0	20
+P3	Antrix mause	C3	M14	69.0	10.0	20
+P4	Monitor HG-2409	C2	M4	899.0	100.0	15
+P5	Audifono HS35N	C6	M7	159.0	20.0	20
+P6	Placa Madre Asus	C5	M3	615.0	45.0	15
+P7	Procesador Ryzen	C7	M2	819.0	80.0	15
+P8	Tarjeta de video MSI	C12	M15	600.0	50.0	15
+P9	Case - 1St Player	C10	M11	249.0	30.0	25
+P10	Fuente Halio ATX	C11	M10	110.0	20.0	15
+P11	Memoria RAM Corsair	C9	M7	299.0	40.0	20
