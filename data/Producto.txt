@@ -6,6 +6,6 @@ P5	Audifono HS35N	C6	M7	159.0	20.0	20
 P6	Placa Madre Asus	C5	M3	615.0	45.0	15
 P7	Procesador Ryzen	C7	M2	819.0	80.0	15
 P8	Tarjeta de video MSI	C12	M15	600.0	50.0	15
-P9	Case - 1St Player	C10	M11	249.0	30.0	25
+P9	Case - 1St Player	C10	M11	249.0	30.0	23
 P10	Fuente Halio ATX	C11	M10	110.0	20.0	15
-P11	Memoria RAM Corsair	C9	M7	299.0	40.0	20
+P11	Memoria RAM Corsair	C9	M7	299.0	40.0	18

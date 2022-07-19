@@ -2,6 +2,9 @@ package pe.edu.upeu.app;
 
 import java.io.Console;
 
+import org.fusesource.jansi.Ansi;
+import org.fusesource.jansi.Ansi.Color;
+
 import pe.edu.upeu.dao.CategoriaDao;
 import pe.edu.upeu.dao.ClienteDao;
 import pe.edu.upeu.dao.MarcaDao;
@@ -17,8 +20,12 @@ public class MenuOpciones {
     Console cons = System.console();
 
     public void login() {
-        System.out.println("************Bienvenidos al Sistema de Ventas*************");
-        System.out.println("****************Valide sus credenciales***************");
+        
+            Ansi colorX=new Ansi();
+            System.out.println(colorX.bgBrightCyan().fgBlack().a("          Bienvenidos al Sistema de Ventas          ").reset());
+            //AnsiConsole.systemInstall();
+            //System.out.println(colorX.render("@|red Hello|@ gggg @|green World|@") );
+        System.out.println("              Valide sus Datos          ");
         uTo.usuario = leerT.leer("", "Ingrese su usuario");
         System.out.println("Ingrese su clave:");
         char[] clavex = cons.readPassword();
@@ -32,15 +39,17 @@ public class MenuOpciones {
     }
     
     public void menuPrincipal() {
-        System.out.println("------------------------------------Sistema de Ventas------------------------------");
+        Ansi colorR=new Ansi();
+        System.out.println(colorR.bgBrightYellow().fgBlack().a("          Sistema de Ventas          ").reset());
         int opciones = 7;
         String menu = "";
-        menu += "1=Registro de Usuario\n";
-        menu += "2=Lista de Usuarios\n";
-        menu += "3=Crear Categoria\n";
-        menu += "4=Crear Marca\n";
-        menu += "5=Crear Cliente\n6=Crear Producto\n7=Lista de Productos\n";
-        menu +="8=Registro Ventas\n9=Reporte de Ventas";
+        menu += "1 = Registro de Usuario\n";
+        menu += "2 = Lista de Usuarios\n";
+        menu += "3 = Crear Categoria\n";
+        menu += "4 = Crear Marca\n";
+        menu += "5 = Crear Cliente\n6 = Crear Producto\n7 = Lista de Productos\n";
+        menu += "8 = Registro Ventas\n9 = Reporte de Ventas\n";
+        menu += "10 = generar pdf reporte\n11 = reporte tabla de venta";
         System.out.println(menu);
         do {
             switch (opciones) {
@@ -50,10 +59,11 @@ public class MenuOpciones {
                 case 4: new MarcaDao().crearMarca(); break;
                 case 5: new ClienteDao().crearCliente(); break;
                 case 6: new ProductoDao().crearProducto(); break;
-                //case 7: new ProductoDao().reportarProductos(); break;
+                case 7: new ProductoDao().reportarProductos(); break;
                 case 8: new VentaDao().registroVentaGeneral();break;
                 case 9: new VentaDao().reporteVentasRangoFecha();break;
-                
+                case 10: new VentaDao().generarPDFReporte(); break ;
+                case 11: new ProductoDao().generarPDFReporte(); break ;
                 default: System.out.println("Opcion Invalida!"); break;
             }
             String continuar=leerT.leer("",
